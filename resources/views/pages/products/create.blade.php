@@ -23,11 +23,12 @@
 
                 <div class="form-group">
                     <label for="type" class="form-control-label">Deskripsi Barang</label>
-                    <textarea name="description" 
+                    <textarea name="description"
                               class="ckeditor form-control @error('description') is-invalid @enderror">{{ old('description') }}
                     </textarea>
-                    @error('description') <div class="text-muted">{{ $message }}</div> @enderror
-            
+                    <!-- Revisi notif error : harus terlihat jelas errornya -->
+                    @error('description') <small class="text-danger">{{ $message }}</small> @enderror
+
                 </div>
 
                 <div class="form-group">
